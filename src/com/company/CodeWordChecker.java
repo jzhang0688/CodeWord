@@ -10,9 +10,15 @@ public class CodeWordChecker implements StringChecker{
         this.max = max;
         this.symbol = symbol;
     }
-    public boolean isValid()
+    public CodeWordChecker(String symbol)
     {
-        if(str.length()<min || str.lentgh() > max || str.contains(symbol))
+        this.min=6;
+        this.max = 20;
+        this.symbol = symbol;
+    }
+    public boolean isValid(String str)
+    {
+        if(str.length()<min || str.length() > max || str.contains(symbol))
         {
             return false;
         }
